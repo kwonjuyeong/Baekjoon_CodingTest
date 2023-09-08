@@ -9,3 +9,6 @@ def solution(date1, date2):
             if date1[2] < date2[2]:
                 return 1
     return 0        
+
+
+# int(date1 < date2)
