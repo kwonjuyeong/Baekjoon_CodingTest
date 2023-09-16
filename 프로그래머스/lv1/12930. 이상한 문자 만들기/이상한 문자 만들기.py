@@ -1,12 +1,15 @@
 def solution(s):
+    words = s.split(' ')
     answer = ''
-    new_list = s.split(' ')
-    for i in new_list:
-        for j in range(len(i)):
-            if j % 2 == 0:
-                answer += i[j].upper()
+    
+    for word in words:
+        for i in range(len(word)):
+            if i % 2 == 0:
+                answer += word[i].upper()
             else:
-                answer += i[j].lower()
-        answer+= ' '
+                answer += word[i].lower()
+        answer += ' '
+        
     return answer[0:-1]
+                 
                   
