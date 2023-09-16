@@ -10,6 +10,6 @@ def solution(s):
                 answer += word[i].lower()
         answer += ' '
         
-    return answer[0:-1]
+    return answer[:-1]
                  
                   
