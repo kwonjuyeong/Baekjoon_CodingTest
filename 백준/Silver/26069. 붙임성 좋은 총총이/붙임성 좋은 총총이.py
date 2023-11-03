@@ -1,15 +1,16 @@
-N = int(input())
+import sys
+input = sys.stdin.readline
 
-dance = ["ChongChong"]
+n = int(input())
+dance = {'ChongChong'}
 
-for _ in range(N):
-	A, B = input().split()
-	if A in dance:
-		dance.append(B)
-	elif B in dance:
-		dance.append(A)
-	else:
-		continue
+for i in range(1, n+1):
+    a, b = input().rstrip().split()
 
-dance = set(dance)
+    if a in dance:
+        dance.add(b)
+
+    if b in dance:
+        dance.add(a)
+
 print(len(dance))
